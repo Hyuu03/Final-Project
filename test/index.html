@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Klasifikasi Gambar</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"> </script>
+</head>
+<body>
+  <h1>Image Classification</h1>
+
+  <!-- Input untuk memilih gambar -->
+  <input type="file" id="image-upload" accept="image/*" onchange="previewImage(event)">
+
+  <!-- Menampilkan gambar yang dipilih -->
+  <img id="image-preview" width="224" height="224" alt="Image Preview" style="display: none;">
+
+  <!-- Menampilkan hasil prediksi -->
+  <h2>Hasil Prediksi:</h2>
+  <p id="prediction-result">Belum ada prediksi.</p>
+
+  <!-- Import TensorFlow.js -->
+
+  <!-- Import file JavaScript kita -->
+  <script src="script.js"></script>
+</body>
+</html>

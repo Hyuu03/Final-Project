@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trash Classification</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="logo">Trash Classification</h1>
+      <nav class="navbar">
+        <a href="Beranda.html">Beranda</a>
+        <a href="TentangKami.html">Tentang Kami</a>
+        <a href="klasifikasi.html" class="btn">Mulai</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="klasifikasi-section">
+        <div class="klasifikasi-container">
+          <h2>Klasifikasi</h2>
+          <p>
+            Pilih atau ambil gambar sampah yang mau kamu tebak!<br />
+            kami akan membantu menebak jenis sampah dari gambar yang kamu pilih.
+          </p>
+          <div class="container">
+            <div class="upload-box">
+              <label for="imageUpload">
+                <img src="img/1.png" alt="icon" />
+                <span>Tidak ada gambar yang dipilih</span>
+              </label>
+              <input type="file" id="imageUpload" accept="image/*" />
+            </div>
+
+            <div class="buttons">
+              <button class="take-photo">Ambil Gambar</button>
+              <button class="choose-photo">
+                <input type="file" id="imageUpload2" accept="image/*" /><label
+                  for="imageUpload2"
+                  >Pilih Gambar</label
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2024 Trash Classification | All rights reserved.</p>
+    </footer>
+  </body>
+</html>
