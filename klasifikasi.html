@@ -5,10 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trash Classification</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="responsive.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
+    <style>
+      .upload-box img.filled {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+    </style>
   </head>
   <body>
     <header class="header">
@@ -26,33 +35,93 @@
           <h2>Klasifikasi</h2>
           <p>
             Pilih atau ambil gambar sampah yang mau kamu tebak!<br />
-            kami akan membantu menebak jenis sampah dari gambar yang kamu pilih.
+            Kami akan membantu menebak jenis sampah dari gambar yang kamu pilih.
           </p>
+
           <div class="container">
-            <div class="upload-box">
+            <div class="upload-box" style="position: relative">
               <label for="imageUpload">
-                <img src="img/1.png" alt="icon" />
-                <span>Tidak ada gambar yang dipilih</span>
+                <img id="uploadedImage" src="img/1.png" alt="icon" />
+                <span id="file-name">Tidak ada gambar yang dipilih</span>
               </label>
+              <button
+                id="deleteImage"
+                class="delete-button"
+                style="display: none"
+              >
+                &times;
+              </button>
               <input type="file" id="imageUpload" accept="image/*" />
             </div>
 
             <div class="buttons">
-              <button class="take-photo">Ambil Gambar</button>
-              <button class="choose-photo">
-                <input type="file" id="imageUpload2" accept="image/*" /><label
-                  for="imageUpload2"
-                  >Pilih Gambar</label
-                >
+              <button id="takePhotoButton" class="take-photo">
+                Ambil Gambar
               </button>
+              <button id="choosePhotoButton" class="choose-photo">
+                <input type="file" id="imageUpload2" accept="image/*" />
+                <label for="imageUpload2">Pilih Gambar</label>
+              </button>
+              <button
+                id="classifyButton"
+                class="classify"
+                style="display: none"
+              >
+                Klasifikasi
+              </button>
+            </div>
+
+            <div
+              id="classification-result"
+              class="classification-result"
+              style="display: none"
+            >
+              <div id="feedback" class="feedback"></div>
+              <table class="result-table">
+                <thead>
+                  <tr>
+                    <th colspan="2"><h3>Hasil Klasifikasi</h3></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Jenis sampah</td>
+                    <td id="result1"></td>
+                  </tr>
+                  <tr>
+                    <td>Penjelasan</td>
+                    <td id="result2"></td>
+                  </tr>
+                </tbody>
+              </table>
+              <button id="back-button" class="back-button">Kembali</button>
             </div>
           </div>
         </div>
       </section>
     </main>
 
+    <!-- Pop-Up Section -->
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <img id="popupImage" src="" alt="Preview" />
+        <h3>Menurut kamu, gambar ini termasuk sampah jenis apa?</h3>
+        <div class="popup-options">
+          <button class="popup-option" data-answer="Baterai">Baterai</button>
+          <button class="popup-option" data-answer="Kaca">Kaca</button>
+          <button class="popup-option" data-answer="Kertas">Kertas</button>
+          <button class="popup-option" data-answer="Logam">Logam</button>
+          <button class="popup-option" data-answer="Organik">Organik</button>
+          <button class="popup-option" data-answer="Plastik">Plastik</button>
+        </div>
+      </div>
+    </div>
+
     <footer class="footer">
       <p>&copy; 2024 Trash Classification | All rights reserved.</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="script.js"></script>
   </body>
 </html>
