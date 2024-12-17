@@ -6,11 +6,137 @@
   .home-container p {
     font-size: 1.8rem;
   }
+
+  .instructions h2 {
+    font-size: 3.5rem;
+  }
+
+  .klasifikasi-container h2 {
+    font-size: 3.5rem;
+  }
+
+  .klasifikasi-container p {
+    font-size: 1.8rem;
+  }
+
+  .upload-box {
+    width: 600px;
+    height: 340px;
+  }
+
+  .classification-result {
+    width: 600px;
+  }
+
+  .container h2 {
+    font-size: 3.5rem;
+  }
+
+  .card {
+    width: 300px;
+    height: 200px;
+  }
+
+  .card .icon {
+    width: 130px;
+    height: 130px;
+  }
+  .card .icon svg {
+    width: 35px;
+    height: 35px;
+  }
+  .card .name {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .card .id {
+    font-size: 15px;
+  }
 }
 
 @media screen and (max-width: 820px) {
   .home-container h2 {
     font-size: 3rem;
+  }
+
+  .home-container p {
+    font-size: 1.4rem;
+  }
+
+  .instructions h2 {
+    font-size: 3rem;
+  }
+
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+  }
+
+  .navbar .hamburger-icon {
+    display: block;
+  }
+
+  .navbar ul.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-color);
+  }
+
+  .navbar ul li {
+    margin: 1rem 0;
+    text-align: left;
+    padding: 0 9%;
+  }
+
+  .klasifikasi-container h2 {
+    font-size: 3rem;
+  }
+
+  .klasifikasi-container p {
+    font-size: 1.5rem;
+  }
+
+  .upload-box {
+    width: 550px;
+    height: 330px;
+  }
+
+  .classification-result {
+    width: 550px;
+  }
+
+  .popup-content {
+    width: 500px;
+  }
+
+  .popup-option {
+    width: 200px;
+  }
+
+  .container h2 {
+    font-size: 3rem;
+  }
+
+  .contributors {
+    flex-direction: column;
+    gap: 10em;
+  }
+
+  .card {
+    width: 100%;
+    height: 200px;
+  }
+
+  .card .name {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .card .id {
+    font-size: 20px;
   }
 }
 
@@ -18,11 +144,117 @@
   .home-container h2 {
     font-size: 2.5rem;
   }
+
+  .hero {
+    padding-left: 0;
+  }
+
+  .instructions h2 {
+    font-size: 2.5rem;
+  }
+
+  .instructions-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .klasifikasi-container h2 {
+    font-size: 2.8rem;
+  }
+
+  .klasifikasi-container p {
+    font-size: 1.4rem;
+  }
+
+  .upload-box {
+    width: 450px;
+    height: 280px;
+  }
+
+  .upload-box img {
+    width: 80px;
+  }
+
+  .buttons button {
+    font-size: 14px;
+  }
+
+  .classification-result {
+    width: 450px;
+  }
+
+  .result-table td {
+    font-size: 14px;
+  }
+
+  .popup-content {
+    width: 450px;
+  }
+
+  .popup-option {
+    width: 175px;
+  }
+
+  .container h2 {
+    font-size: 2.5rem;
+  }
+
+  .contributors {
+    padding: 100px 80px;
+  }
 }
 
 @media screen and (max-width: 617px) {
   .home-container h2 {
     font-size: 2.3rem;
+  }
+
+  .home-container p {
+    font-size: 1.2rem;
+  }
+
+  .instructions h2 {
+    font-size: 2.3rem;
+  }
+
+  .logo {
+    font-size: 2rem;
+  }
+
+  .klasifikasi-container p {
+    font-size: 1.2rem;
+  }
+
+  .upload-box {
+    width: 400px;
+    height: 230px;
+  }
+
+  .classification-result {
+    width: 400px;
+  }
+
+  .result-table td {
+    font-size: 12px;
+  }
+
+  .popup-content {
+    width: 400px;
+  }
+
+  .popup-option {
+    width: 151px;
+  }
+
+  .contributors {
+    padding: 100px 50px;
+  }
+
+  .card .name {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .card .id {
+    font-size: 18px;
   }
 }
 
@@ -30,10 +262,211 @@
   .home-container h2 {
     font-size: 2rem;
   }
+
+  .instructions h2 {
+    font-size: 2rem;
+  }
+
+  .step img {
+    width: 90px;
+  }
+
+  .step strong {
+    font-size: 18px;
+  }
+
+  .step p {
+    font-size: 13px;
+  }
+
+  .logo {
+    font-size: 1.8rem;
+  }
+
+  .klasifikasi-container h2 {
+    font-size: 2.5rem;
+  }
+
+  .klasifikasi-container p {
+    font-size: 1rem;
+  }
+
+  .upload-box {
+    width: 320px;
+    height: 210px;
+  }
+
+  .upload-box img {
+    width: 70px;
+  }
+
+  .buttons button {
+    font-size: 12px;
+  }
+
+  .classification-result {
+    width: 320px;
+  }
+
+  .feedback {
+    font-size: 14px;
+  }
+
+  .result-table th h3 {
+    font-size: 16px;
+  }
+
+  .popup-content {
+    width: 350px;
+  }
+
+  .popup-options {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .popup-option {
+    width: 260px;
+  }
+
+  .contributors {
+    padding: 100px 20px;
+    gap: 8em;
+  }
+
+  .card {
+    height: 180px;
+  }
+
+  .card .icon {
+    width: 110px;
+    height: 110px;
+    top: -50px;
+  }
+
+  .card .name {
+    font-size: 18px;
+  }
+  .card .id {
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 462px) {
+  .home-container p {
+    font-size: 1rem;
+  }
+
+  .instructions-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .step img {
+    width: 80px;
+  }
+
+  .step strong {
+    font-size: 16px;
+  }
+
+  .step p {
+    font-size: 13px;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .footer {
+    font-size: 1.3rem;
+  }
+
+  .upload-box {
+    width: 280px;
+    height: 180px;
+  }
+
+  .upload-box span {
+    font-size: 12px;
+  }
+
+  .classification-result {
+    width: 280px;
+  }
+
+  .result-table th h3 {
+    font-size: 14px;
+  }
+
+  .result-table td {
+    font-size: 11px;
+  }
+
+  .popup-content {
+    width: 300px;
+  }
+
+  .popup-option {
+    width: 215px;
+  }
+
+  .popup-content h3 {
+    font-size: 15px;
+  }
+
+  .contributors {
+    padding: 40px 0px;
+    gap: 8em;
+  }
+
+  .card {
+    height: 160px;
+  }
+
+  .card .icon {
+    width: 100px;
+    height: 100px;
+    top: -37px;
+  }
+
+  .card .name {
+    font-size: 16px;
+  }
+  .card .id {
+    font-size: 15px;
+  }
 }
 
 @media screen and (max-width: 371px) {
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  .footer {
+    font-size: 1.1rem;
+  }
+
+  .upload-box {
+    width: 250px;
+    height: 150px;
+  }
+
+  .classification-result {
+    width: 250px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .popup-content {
+    width: 280px;
+  }
+
+  .popup-option {
+    width: 193px;
+  }
+
+  .popup-content h3 {
+    padding: 10px;
+  }
 }

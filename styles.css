@@ -55,7 +55,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 100;
+  z-index: 1001;
   transition: 0.3s;
 }
 
@@ -66,8 +66,28 @@ body {
   font-weight: 600;
 }
 
-.navbar {
+/* .navbar {
   position: relative;
+} */
+
+.navbar .hamburger-icon {
+  display: none;
+  font-size: 2.5rem;
+  color: var(--text1-color);
+  cursor: pointer;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar ul.active {
+  display: block;
+}
+
+.navbar ul li {
+  margin-left: 3.5rem;
+  list-style-type: none;
 }
 
 .navbar a,
@@ -75,7 +95,6 @@ body {
   font-size: 1.7rem;
   color: var(--text1-color);
   font-weight: 500;
-  margin-left: 3.5rem;
   transition: 0.3s;
 }
 
@@ -190,7 +209,7 @@ section {
 }
 
 .step img {
-  width: 35%;
+  width: 120px;
   padding-bottom: 2em;
 }
 
@@ -248,7 +267,8 @@ section {
 }
 
 .upload-box input[type="file"],
-.choose-photo input[type="file"] {
+.choose-photo input[type="file"],
+.take-photo input[type="file"] {
   display: none;
 }
 
@@ -284,6 +304,10 @@ section {
 }
 
 .choose-photo label {
+  cursor: pointer;
+}
+
+.take-photo label {
   cursor: pointer;
 }
 
@@ -480,6 +504,7 @@ section {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   position: relative;
 }
+
 .card .icon {
   background-color: var(--second-color);
   border-radius: 50%;

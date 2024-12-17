@@ -98,6 +98,31 @@ document.getElementById("imageUpload").addEventListener("change", (event) => {
   reader.readAsDataURL(file);
 });
 
+// Ambil elemen input kamera
+document.getElementById("cameraInput").addEventListener("change", (event) => {
+  const file = event.target.files[0]; // Dapatkan file dari input
+  const reader = new FileReader();
+
+  reader.onload = (e) => {
+    // Buat gambar baru dari data file yang diunggah
+    const image = new Image();
+    image.src = e.target.result;
+
+    // Tampilkan gambar di elemen dengan id 'uploadedImage'
+    document.getElementById("uploadedImage").src = e.target.result;
+    document.getElementById("uploadedImage").classList.add("filled");
+
+    // Sembunyikan elemen-elemen tertentu
+    document.getElementById("file-name").style.display = "none";
+    document.getElementById("deleteImage").style.display = "block";
+    document.getElementById("takePhotoButton").style.display = "none";
+    document.getElementById("choosePhotoButton").style.display = "none";
+    document.getElementById("classifyButton").style.display = "inline-block";
+  };
+
+  reader.readAsDataURL(file); // Membaca file gambar sebagai URL data (base64)
+});
+
 document.getElementById("imageUpload2").addEventListener("change", (event) => {
   const file = event.target.files[0];
   const reader = new FileReader();

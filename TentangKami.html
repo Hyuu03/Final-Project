@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trash Classification</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="responsive.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -14,9 +15,12 @@
     <header class="header">
       <h1 class="logo">Trash Classification</h1>
       <nav class="navbar">
-        <a href="index.html">Beranda</a>
-        <a href="TentangKami.html">Tentang Kami</a>
-        <a href="klasifikasi.html" class="btn">Mulai</a>
+        <i class="bx bx-menu hamburger-icon"></i>
+        <ul class="nav-links">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="TentangKami.html">Tentang Kami</a></li>
+          <li><a href="klasifikasi.html" class="btn">Mulai</a></li>
+        </ul>
       </nav>
     </header>
 
@@ -57,5 +61,14 @@
     <footer class="footer">
       <p>&copy; 2024 Trash Classification | All rights reserved.</p>
     </footer>
+
+    <script>
+      const hamburgerIcon = document.querySelector(".hamburger-icon");
+      const navLinks = document.querySelector(".nav-links");
+
+      hamburgerIcon.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>
