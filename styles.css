@@ -372,6 +372,15 @@ section {
   border-radius: 10px;
   text-align: center;
   width: 600px;
+  max-width: 600px; /* Batas lebar maksimum */
+  max-height: 80vh; /* Maksimal 80% dari tinggi layar */
+  overflow-y: auto; /* Scroll secara vertikal */
+  scrollbar-width: none; /* Untuk Firefox */
+  -ms-overflow-style: none; /* Untuk IE dan Edge lama */
+}
+
+.popup-content::-webkit-scrollbar {
+  display: none; /* Sembunyikan scrollbar di Chrome, Safari, dan Edge baru */
 }
 
 .popup-content img {
